@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "28dd05b4-8f2f-4881-a929-5cff5a5e4c14",
+		"name": "springcrud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get speakers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BasePath}}/api/v1/speakers",
+					"host": [
+						"{{BasePath}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"speakers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get speaker by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BasePath}}/api/v1/speakers/1",
+					"host": [
+						"{{BasePath}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"speakers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update speaker",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Aliko\",\r\n    \"title\": \"Senior Dev\",\r\n    \"company\": \"Billionaire Industrialist\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BasePath}}/api/v1/speakers/1",
+					"host": [
+						"{{BasePath}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"speakers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete speaker",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BasePath}}/api/v1/speakers/1",
+					"host": [
+						"{{BasePath}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"speakers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new speaker",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Spring Dev\",\r\n    \"title\": \"Dev\",\r\n    \"company\": \"TCB\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BasePath}}/api/v1/speakers",
+					"host": [
+						"{{BasePath}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"speakers"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BasePath",
+			"value": "http://localhost:8080"
+		}
+	]
+}
